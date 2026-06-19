@@ -1,0 +1,8 @@
+node_modules/
+.next/
+*.log
+build-output*.txt
+dev-output*.txt
+ts-output.txt
+.env.local
+src/data/orders.json
