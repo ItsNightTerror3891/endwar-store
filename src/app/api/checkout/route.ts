@@ -1,21 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
-import { join } from 'path'
-
-const DATA_DIR = join(process.cwd(), 'src', 'data')
-const ORDERS_FILE = join(DATA_DIR, 'orders.json')
-
-function readOrders(): any[] {
-  try {
-    if (!existsSync(ORDERS_FILE)) return []
-    return JSON.parse(readFileSync(ORDERS_FILE, 'utf-8'))
-  } catch { return [] }
-}
-
-function writeOrders(orders: any[]) {
-  if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR, { recursive: true })
-  writeFileSync(ORDERS_FILE, JSON.stringify(orders, null, 2), 'utf-8')
-}
+import { kv } from '@vercel/kv'
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,9 +9,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid order data' }, { status: 400 })
     }
 
-    const orders = readOrders()
+    const orders = (await kv.get<any[]>('orders')) || []
     orders.push(order)
-    writeOrders(orders)
+    await kv.set('orders', orders)
 
     return NextResponse.json({ success: true, orderId: order.id })
   } catch {

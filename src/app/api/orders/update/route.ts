@@ -1,19 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync, writeFileSync, existsSync } from 'fs'
-import { join } from 'path'
-
-const ORDERS_FILE = join(process.cwd(), 'src', 'data', 'orders.json')
-
-function readOrders(): any[] {
-  try {
-    if (!existsSync(ORDERS_FILE)) return []
-    return JSON.parse(readFileSync(ORDERS_FILE, 'utf-8'))
-  } catch { return [] }
-}
-
-function writeOrders(orders: any[]) {
-  writeFileSync(ORDERS_FILE, JSON.stringify(orders, null, 2), 'utf-8')
-}
+import { kv } from '@vercel/kv'
 
 export async function POST(req: NextRequest) {
   try {
@@ -28,7 +14,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'orderId and status required' }, { status: 400 })
     }
 
-    const orders = readOrders()
+    const orders = (await kv.get<any[]>('orders')) || []
     const index = orders.findIndex((o: any) => o.id === orderId)
 
     if (index === -1) {
@@ -37,7 +23,7 @@ export async function POST(req: NextRequest) {
 
     orders[index].status = status
     orders[index].updatedAt = new Date().toISOString()
-    writeOrders(orders)
+    await kv.set('orders', orders)
 
     return NextResponse.json({ success: true, order: orders[index] })
   } catch {
