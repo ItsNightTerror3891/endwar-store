@@ -32,7 +32,7 @@ export default function LoadingScreen() {
               <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }} className="w-4 h-4 bg-white rounded-full shadow-[0_0_20px_rgba(156,77,255,0.8)]" />
             </div>
           </div>
-          <h1 className="font-minecraft text-2xl gradient-text mb-4">Loading EndWar Store...</h1>
+          <h1 className="font-minecraft text-2xl gradient-text mb-4">Loading SlayerMcc Store...</h1>
           <div className="w-64 h-2 rounded-full bg-end-900/50 overflow-hidden border border-end-500/20">
             <motion.div className="h-full bg-gradient-to-r from-end-500 to-cyan-400 rounded-full" initial={{ width: 0 }} animate={{ width: `${progress}%` }} />
           </div>

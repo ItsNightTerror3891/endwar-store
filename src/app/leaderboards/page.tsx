@@ -12,7 +12,7 @@ interface LeaderboardEntry {
 
 const leaderboardData: LeaderboardEntry[] = [
   { rank: 1, name: 'ItsNightTerror', value: 25000, change: 'up' },
-  { rank: 2, name: 'EndWarrior_X', value: 18200, change: 'up' },
+  { rank: 2, name: 'SlayerPro_X', value: 18200, change: 'up' },
   { rank: 3, name: 'VoidWalker99', value: 15400, change: 'same' },
   { rank: 4, name: 'DragonSlayer_', value: 12800, change: 'down' },
   { rank: 5, name: 'PearlMaster', value: 10500, change: 'up' },
@@ -32,7 +32,7 @@ export default function LeaderboardsPage() {
             <HiArrowLeft /> Back to Home
           </Link>
           <h1 className="font-minecraft text-3xl md:text-4xl gradient-text mb-4">Leaderboards</h1>
-          <p className="text-gray-400">Top supporters of the EndWar community</p>
+          <p className="text-gray-400">Top supporters of the SlayerMcc community</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
