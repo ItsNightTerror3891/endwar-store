@@ -107,18 +107,18 @@ export default function Hero3D() {
           <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 text-xs md:text-sm">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             <span className="text-gray-300">Server Online — </span>
-            <span className="font-minecraft text-cyan-400">endwarmc.aternos.me</span>
+            <span className="font-minecraft text-cyan-400">play.slayermcc.fun</span>
           </div>
         </motion.div>
 
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }}
           className="font-minecraft text-5xl md:text-7xl lg:text-8xl gradient-text mb-6 leading-tight">
-          EndWar Lifesteal
+          SlayerMcc
         </motion.h1>
 
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.4 }}
           className="text-gray-400 text-base md:text-lg max-w-xl mx-auto mb-8">
-          Steal hearts, forge alliances, and survive. The more hearts you take, the stronger you become. Lifesteal SMP at its peak.
+          Steal hearts, forge alliances, and survive. The more hearts you take, the stronger you become. Lifesteal at its peak.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6 }}

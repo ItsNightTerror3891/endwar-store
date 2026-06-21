@@ -34,7 +34,7 @@ export default function DashboardPage() {
   }, [player.username])
 
   const copyIP = () => {
-    navigator.clipboard.writeText('endwarmc.aternos.me')
+    navigator.clipboard.writeText('play.slayermcc.fun')
     setCopied('ip')
     setTimeout(() => setCopied(''), 2000)
   }
@@ -76,7 +76,7 @@ export default function DashboardPage() {
             className="glass-card rounded-xl p-4">
             <p className="text-gray-500 text-xs mb-1">Server IP</p>
             <button onClick={copyIP} className="font-minecraft text-sm text-cyan-400 hover:text-cyan-300 transition-all flex items-center gap-2 mt-1">
-              endwarmc.aternos.me
+              play.slayermcc.fun
               {copied === 'ip' ? <HiCheck className="text-green-400" /> : <HiClipboardCopy className="text-gray-500" />}
             </button>
           </motion.div>

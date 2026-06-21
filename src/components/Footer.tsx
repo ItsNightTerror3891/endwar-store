@@ -12,9 +12,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-full end-glow bg-gradient-to-br from-end-400 to-cyan-400 flex items-center justify-center text-xs font-bold">E</div>
-              <span className="font-minecraft text-lg gradient-text">EndWar</span>
+              <span className="font-minecraft text-lg gradient-text">SlayerMcc</span>
             </div>
-            <p className="text-gray-400 text-sm">Premium Lifesteal SMP store. Support us and unlock exclusive keys, ranks, and rewards.</p>
+            <p className="text-gray-400 text-sm">Premium Lifesteal store. Support us and unlock exclusive keys, ranks, and rewards.</p>
           </div>
           <div>
             <h3 className="font-minecraft text-end-300 mb-4 text-sm">Store</h3>
@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <h3 className="font-minecraft text-end-300 mb-4 text-sm">Server IP</h3>
             <div className="glass rounded-lg p-3 mb-4">
-              <p className="text-cyan-400 font-minecraft text-xs">endwarmc.aternos.me</p>
+              <p className="text-cyan-400 font-minecraft text-xs">play.slayermcc.fun</p>
             </div>
             <div className="flex gap-3">
               {[FaDiscord].map((Icon, i) => (
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-end-500/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-xs">© 2026 EndWar Store. Not affiliated with Mojang AB.</p>
+          <p className="text-gray-500 text-xs">© 2026 SlayerMcc Store. Not affiliated with Mojang AB.</p>
           <p className="text-gray-500 text-xs flex items-center gap-1">Made with <HiHeart className="text-red-500" /> for the Lifesteal community</p>
         </div>
       </div>

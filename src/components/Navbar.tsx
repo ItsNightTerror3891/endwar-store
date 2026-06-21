@@ -9,6 +9,7 @@ import { HiMenu, HiX, HiShoppingCart, HiUser } from 'react-icons/hi'
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Store', href: '/store' },
+  { label: 'Ranks', href: '/ranks' },
   { label: 'Keys', href: '/keys' },
   { label: 'Discord', href: 'https://discord.gg/WZUr5TYn5g' },
 ]
@@ -32,7 +33,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
             <Link href="/" className="flex items-center gap-2 group">
               <div className="w-8 h-8 rounded-full end-glow bg-gradient-to-br from-end-400 to-cyan-400 flex items-center justify-center text-xs font-bold">E</div>
-              <span className="font-minecraft text-lg gradient-text">EndWar</span>
+              <span className="font-minecraft text-lg gradient-text">SlayerMcc</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">

@@ -10,7 +10,7 @@ const categories = ['all', 'rank', 'keys'] as const
 const categoryLabels: Record<string, string> = {
   all: 'All Items',
   rank: 'Ranks',
-  keys: 'Key Packs',
+  keys: 'Keys',
 }
 
 export default function StorePage() {
@@ -30,7 +30,7 @@ export default function StorePage() {
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <h1 className="font-minecraft text-3xl md:text-4xl gradient-text mb-4">Store</h1>
-          <p className="text-gray-400">Browse keys, ranks, and bundles to enhance your Lifesteal experience</p>
+          <p className="text-gray-400">Browse keys and ranks to enhance your Lifesteal experience</p>
         </motion.div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">

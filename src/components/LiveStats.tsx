@@ -23,7 +23,7 @@ export default function LiveStats() {
 }
 
 export function ServerIP() {
-  const serverIP = 'endwarmc.aternos.me'
+  const serverIP = 'play.slayermcc.fun'
 
   const copyIP = () => {
     navigator.clipboard.writeText(serverIP)

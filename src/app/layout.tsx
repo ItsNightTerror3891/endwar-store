@@ -20,9 +20,9 @@ const minecraft = Press_Start_2P({
 })
 
 export const metadata: Metadata = {
-  title: 'EndWar Store | Premium Minecraft Server',
-  description: 'Support EndWar Lifesteal SMP and unlock exclusive keys, ranks, and rewards.',
-  keywords: 'minecraft, lifesteal, server, store, keys, ranks, endwar',
+  title: 'SlayerMcc Store | Premium Minecraft Server',
+  description: 'Support SlayerMcc Lifesteal and unlock exclusive keys, ranks, and rewards.',
+  keywords: 'minecraft, lifesteal, server, store, keys, ranks, slayermcc',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
